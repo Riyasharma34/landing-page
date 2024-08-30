@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styles */
+       /* Reset some default styles */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background:palevioletred;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color:red;
+    text-align: center;
+    padding: 120px 20px;
+    position: relative;
+    overflow: hidden;
+    background-image: url('hero-image.jpg'); /* Add your hero image here */
+    background-size: cover;
+    background-position: center;
+}
+
+header h1 {
+    font-size: 4.5em;
+    margin-bottom: 0.5em;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-out;
+    color: #fff;
+}
+
+header p {
+    font-size: 1.6em;
+    margin-bottom: 1.5em;
+    animation: fadeIn 2s ease-out 0.5s;
+    color: #fff;
+}
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    color: #fff;
+    background: #ff6f61; /* Vibrant button color */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.cta-button:hover {
+    background: #e55d4d; /* Slightly darker on hover */
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 4.5em;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.6em;
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+
+/* Features Section */
+.features {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.features .feature {
+    margin: 20px auto;
+    max-width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #d5a6d5, #c2c2f0);
+}
+
+.features .feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.features h2 {
+    color: #ff7e5f;
+    font-size: 2.4em;
+    margin-bottom: 0.5em;
+}
+
+.features p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* About Us Section */
+.about {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.about p {
+    font-size: 1.2em;
+    color: #fff;
+    margin-bottom: 1.5em;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.8em;
+    color: #ff7e5f;
+    margin-bottom: 1em;
+}
+
+.faq .question {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.faq .answer {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Blog Section */
+.blog {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #a2c2e3, #f9d5bb);
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.blog-post {
+    margin: 20px auto;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.blog-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fbc2eb, #a6c0fe);
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2.8em;
+    color: #fff;
+    margin-bottom: 1em;
+}
+
+.testimonial {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 0.5em;
+}
+
+.testimonial span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.pricing h2 {
+    font-size: 2.8em;
+    color: #ff7e5f;
+    margin-bottom: 1em;
+}
+
+.pricing-plan {
+    display: inline-block;
+    margin: 20px;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #c2e9fb, #a1c4fd);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-plan h3 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+.pricing-plan p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1em;
+}
+
+.pricing-plan .price {
+    font-size: 2.5em;
+    color: #ff7e5f;
+    margin-bottom: 1em;
+}
+
+.pricing-plan .cta-button {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    background: #ff6f61; /* Match button color */
+}
+
+.pricing-plan .cta-button:hover {
+    background: #e55d4d; /* Slightly darker on hover */
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2.8em;
+    color: #ff7e5f;
+    margin-bottom: 1em;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact input, .contact textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    padding: 12px 20px;
+    color: #fff;
+    background: #ff7e5f;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact button:hover {
+    background: #ff5e4f;
+    transform: scale(1.02);
+}
+
+/* Footer Styles */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-content">
+            <h1>Welcome to Our Service</h1>
+            <p>Your journey to better starts here</p>
+            <a href="#cta" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div>
+                <h2>All Health Checkups</h2>
+            </div>
+            <div class="feature">
+                <h2>Basic health Package</h2>
+                <p>GLUCOSE, FASTING</p>
+                <P>ELECTROCARDIOGRAPHY(ECG)</P>
+                <p>X-RAY  MAMMOGRAPHY</p>
+                <P>CONSULTATION</P>
+            </div>
+            <div class="feature">
+                <h2> Standard Health Package</h2>
+                <p>CREATININE EGFR- EP</p>
+                <p>CONSULTATION</p>
+                <p>GLUCOSE POST-PRANDIAL, PLASMA</p>
+                <p>ELECTROCARDIOGRAPH(ECG)</p>
+            </div>
+            <div class="feature">
+                <h2>Premium Health Chekup</h2>
+                <p>CREATININE EGFR- EPI</p>
+                <p>MEDICAL EXAMINATION</p>
+                <p>GLYCOSYLATED HEMOGLOBIN</p>
+                <p>TREAD MILL TEST ( TMT )</p>
+            </div>
+           
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Leading Integrated Healthcare Services Provider in India</p>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="question"><h3>What is our service about?</h3></div>
+                <div class="answer"><b>Our service offers solutions designed to improve your health.</b</div>
+            </div>
+            <div class="faq-item">
+                <div class="question"><h3>How & when do we get Reports ?</h3></div>
+                <div class="answer"><b> can reach our support team through the contact form on our website or via email within 48 hrs.</b></div>
+            </div>
+            <div class="faq-item">
+                <div class="question"><h3>Which samples and how much quantity are required to conduct Preventive health checkup?</h3></div>
+                <div class="answer"><b> Blood sample is required to conduct all these Tests. Only 5ml samples is required which is taken from your right arm..</b></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="container">
+            <h2>Our Values</h2>
+            <div class="blog-post">
+                <h3>Patient Centricity</h3>
+                <p>Commit to best outcomes and experience for our patients
+                    Treat patients and their caregivers with compassion. </p>
+            </div>
+            <div class="blog-post">
+                <h3>Integrity</h3>
+                <p>Be principled, open and honest
+                    Model and live our Values
+                    Demonstrate moral courage to speak up and do the right things.</p>
+            </div>
+            <div class="blog-post">
+                <h3>Innovation</h3>
+                <p>Continuously improve and innovate to exceed expectations
+                    Adopt a can-do attitude
+                    Challenge ourselves to do things differently.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="cta">
+        <div class="container">
+            <h2>Ready to get started?</h2>
+            <p>Join thousands of satisfied customers and take the first step today.</p>
+            <a href="#contact" class="cta-button">Sign Up Now</a>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"I felt that the clinician treated my concerns with respect and a plan of action was agreed to my satisfaction"</p>
+                <span>- Jane Doe</span>
+            </div>
+            <div class="testimonial">
+                <p>"An amazing experience.Really quick appointment and Doctor was so polite and knowledgeable."</p>
+                <span>- John Smith</span>
+            </div>
+            <div class="testimonial">
+                <p>"It was a very friendly and professional service.."</p>
+                <span>- Sarah Lee</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-plan">
+                <h3>Basic Plan</h3>
+                <p>Perfect for individuals looking to get started.</p>
+                <div class="price">1999/month</div>
+                <a href="#contact" class="cta-button">Sign Up</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Standard Plan</h3>
+                <p>Physical fitness is the first requisite of happiness.</p>
+                <div class="price">4500/month</div>
+                <a href="#contact" class="cta-button">Sign Up</a>
+            </div>
+            <div class="pricing-plan">
+                <h3>Premium Plan</h3>
+                <p>Your body hears everything your mind says.</p>
+                <div class="price">5700/month</div>
+                <a href="#contact" class="cta-button">Sign Up</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
